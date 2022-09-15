@@ -15,18 +15,20 @@ const Cards = () => {
     const [cards, setCards] = useState<Card[]>([]);
 
     useEffect(() => {
-        // fetch("./cards.json")
-        //     .then((res) => {
-        //         return res.json();
-        //     })
-        //     .then((data) => {
-        //         setCards(data);
-        //         window.localStorage.setItem("datacard", JSON.stringify(data));
-        //     });
-
-        const localdata = window.localStorage.getItem("datacard");
-        const parsedData = localdata ? JSON.parse(localdata) : {};
-        setCards(parsedData);
+        if (window.localStorage.getItem("datacard")) {
+            const localdata = window.localStorage.getItem("datacard");
+            const parsedData = localdata ? JSON.parse(localdata) : {};
+            setCards(parsedData);
+        } else {
+            fetch("./cards.json")
+                .then((res) => {
+                    return res.json();
+                })
+                .then((data) => {
+                    setCards(data);
+                    window.localStorage.setItem("datacard", JSON.stringify(data));
+                });
+        }
     }, []);
 
     const removeCard = (id: number) => {
