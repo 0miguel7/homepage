@@ -1,0 +1,10 @@
+[
+    { "name": "Whatsapp", "link": "https://web.whatsapp.com", "color": "ForestGreen" },
+    { "name": "Youtube", "link": "https://www.youtube.com", "color": "FireBrick" },
+    { "name": "AnimeFLV", "link": "https://www3.animeflv.net", "color": "DarkOrange" },
+    { "name": "Twitter", "link": "https://twitter.com", "color": "Skyblue" },
+    { "name": "Gmail UNMSM", "link": "https://mail.google.com/mail/u/1/", "color": "Linen" },
+    { "name": "Gmail work", "link": "https://mail.google.com/mail/u/2/", "color": "AliceBlue" },
+    { "name": "Facebook", "link": "https://facebook.com", "color": "RoyalBlue" },
+    { "name": "Trovo", "link": "https://trovo.live", "color": "ForestGreen" }
+]
